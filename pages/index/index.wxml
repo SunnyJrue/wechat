@@ -1,0 +1,29 @@
+<view class="movie">
+    <view class="movie-list" wx:for="{{movies}}">
+        
+        <navigator url='/pages/details/details?id={{item.id}}'>
+            <view class='movie-container'>
+                
+                <view class='movie-img'>
+                    <image src='{{item.img}}'></image>
+                </view>
+                <view class='movie-content'>
+                    
+                    <view class='movie-title'>{{item.nm}}<text><text wx:if="{{item['3d']}}" class='movie-3d'>3D</text><text wx:if='{{item.imax}}' class='movie-imax'>IMAX</text></text>
+                        <text class='movie-score' wx:if="{{item.sc !=0 }}">
+                            <text class='movie-num'>{{item.sc}}</text><text class='movie-fen'>分</text>
+                        </text>
+                        <text class='movie-score' wx:elif="{{item.sc == 0}}">
+                            <text class='movie-num'>{{item.wish}}</text><text class='movie-fen'>人想看</text>
+                        </text>
+
+                    </view>
+                    <view class='movie-cat'>{{item.cat}}</view>
+                    <view class='movie-star'>主演:{{item.star}}</view>
+                    <view class='movie-showinfo'>{{item.showInfo}}   <label wx:if='{{item.preSale == 0}}'><a class='pay-ticket' href="">购票</a></label><label wx:elif='{{item.preSale == 1}}'><a class='pay-ticket-pre' href="">预售</a></label></view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+
+</view>

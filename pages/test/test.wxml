@@ -1,0 +1,7 @@
+<view wx:for='{{arr}}' bindtap='addNum'>
+    <view wx:if='{{item <= 1}}'>1</view>
+    <view wx:if='{{item < 4}}'>4</view>
+    <view wx:if='{{item >10}}'>11</view>
+    {{arr}}
+</view>
+

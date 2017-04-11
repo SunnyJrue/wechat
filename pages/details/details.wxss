@@ -1,0 +1,252 @@
+page{
+    font-family:'Microsoft YaHei';
+    background:#F4F4F4;
+}
+.details-title{
+    height:100rpx;
+    text-align:center;
+    background:#21336f;
+    color:#fff;
+    line-height:100rpx;
+    font-size:30rpx;
+    font-weight:bold;
+    position:relative;
+}
+.back-icon{
+    width:60rpx;
+    position: absolute;
+    left:10rpx;
+    font-size:40rpx;
+}
+.details-head{
+    padding:28rpx ;
+    position:relative;
+
+    
+}
+.details-head image{
+    width:214rpx;
+    height:300rpx;
+}
+.details-box{
+    display:flex;
+}
+.movie-name{
+    font-size:32rpx;
+    color:#fff;
+}
+.details-content{
+    margin-left:20rpx;
+    color:#fff;
+    font-size:24rpx;
+}
+.details-content view{
+    margin-bottom:4rpx;
+}
+.movie-score{
+    display:inline;
+}
+.score-highlight{
+
+    color:#EFBA06;
+    font-size:28rpx;
+}
+.score-wish{
+    color:#F2950B;
+    font-size:28rpx;
+    padding-bottom:12rpx;
+    padding-top:8rpx;
+}
+.movie-description{
+    width:100%;
+    background:#fff;
+    overflow:hidden;
+}
+.blur-box{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    filter:blur(40rpx);
+    background-repeat:no-repeat;
+    background-size:100% 360rpx;
+}
+
+.movie-box{
+    padding:0 28rpx;
+}
+.movie-description button{
+    font-size:32rpx;
+    height:72rpx;
+    font-size:#fff;
+    background:#21336f;
+    margin:20rpx 0;
+    color:#fff;
+    line-height:72rpx;
+}
+.movie-desc{
+    position:relative;
+}
+.movie-desc.hide-msg{
+    font-size:28rpx;
+    letter-spacing:2rpx;
+    padding-bottom:50rpx;
+}
+.icon-tips{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    background:#fff;
+    text-align:center;
+    font-size:36rpx;
+    color:#AAAAAA;
+}
+
+
+.video-play{
+    margin-top:20rpx;
+    background:#fff;
+    padding:20rpx 28rpx 28rpx;
+}
+.video-title {
+    font-size:28rpx;
+    color:#666;
+    font-weight:bold;
+    margin-bottom:20rpx;
+}
+.video-play video{
+    width:100%;
+    height:auto;
+}
+
+
+
+.media-photo{
+    padding:20rpx 28rpx 28rpx;
+    background:#fff;
+    margin-top:20rpx;
+}
+.media-title{
+    font-size:28rpx;
+    font-weight:bold;
+    margin-bottom:20rpx;
+    color:#666666;
+}
+
+.media-photo image{
+    width:180rpx;
+    height:140rpx;
+    margin-right:14rpx;
+
+}
+.photo-box{
+    height:140rpx;
+    white-space: nowrap; 
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+.comments{
+    margin-top:20rpx;
+    background:#fff;
+    
+}
+.comments-title{
+    font-size:28rpx;
+    font-weight:bold;
+    border-bottom:2rpx solid #EBEBEB;
+    padding:20rpx 28rpx 28rpx; 
+}
+.comments-contents{
+    padding:0rpx 28rpx 28rpx;
+
+}
+.coment-lists{
+    border-bottom:2rpx solid #EBEBEB;
+
+}
+.star-count{
+    padding:4rpx 0 ;
+}
+.star-count image{
+    width:24rpx;
+    height:24rpx;
+}
+.release-time{
+    font-size:24rpx;
+    color:#999;
+    margin-left:10rpx;
+}
+.star-count view{
+    display:inline-block;
+}
+.comments-text{
+    font-size:24rpx;
+    
+    line-height:36rpx;
+}
+.avator-msg{
+    position:relative;
+}
+.avator-image{
+    width:58rpx;
+    height:58rpx;
+    padding-bottom:28rpx;
+    margin-top:28rpx;
+    display:inline-block;
+}
+.avator-image image{
+    width:58rpx;
+    height:58rpx;
+    border-radius:50%;
+}
+.user-nickname{
+    font-size:24rpx;
+    color:#B8B8B8;
+    vertical-align:16rpx;
+    display:inline-block;
+    margin-left:16rpx;
+}
+.payed{
+    display:inline-block;
+    font-size:24rpx;
+    color:#fff;
+    background:#FF9900;
+    padding:0 4rpx;
+    border-radius:4rpx;
+    vertical-align:16rpx;
+    margin-left:10rpx;
+}
+
+
+.comment-approve{
+    display:inline-block;
+    vertical-align:6rpx;
+    position:absolute;
+    top:40rpx;
+    right:18rpx;
+
+}
+.comment-approve view{
+    display:inline-block;
+    font-size:24rpx;
+    color:#a1a1a1;
+    vertical-align:12rpx;
+    margin-left:6rpx;
+}
+.comment-icon{
+    width:40rpx;
+    height:40rpx;
+    margin-left:10rpx;
+}
+.big-image{
+    position:absolute;
+    top:0;
+    left:0;
+    background:#000;
+    width:100%;
+    height:100%;
+}

@@ -1,0 +1,180 @@
+page{
+    background:#EBEBEB;
+}
+
+.cinemaDetail-title{
+    padding:28rpx;
+    background:#fff;
+}
+.text{
+    width:80%;
+    display:inline-block;
+}
+.text-nm{
+    font-size:36rpx;
+}
+.text-addr{
+    font-size:28rpx;
+    color:#777777;
+}
+
+.phone{
+    display:inline-block;
+    padding-left:16rpx;
+    vertical-align:28rpx;
+    height:130rpx;
+    text-align:top;
+    line-height:130rpx;
+}
+.phone:before{
+    border-left:2rpx solid #DEDEDE;
+    height:66rpx;
+    display:inline-block;
+    content: '';
+    vertical-align: middle;
+
+}
+.phone image{
+    width:60rpx;
+    height:60rpx;
+    vertical-align:middle;
+    margin-left:40rpx;
+}
+
+
+.movie-show{
+    height:300rpx;
+    background:#5B5B5B;
+    padding-bottom:20rpx;
+}
+
+.movie-box{
+    height:300rpx;
+    white-space:nowrap;
+    display:flex;
+    
+}
+.movie-box image{
+    width:160rpx;
+    height:220rpx;
+    margin:16rpx;
+    margin-top:50rpx;
+    margin-bottom:10rpx;
+    
+
+}
+/* .first-image{
+    margin-left:256rpx;
+}
+ */
+.movie-box .selected{
+    width:182rpx;
+    height:250rpx;
+    border:2rpx solid #fff;
+}
+
+
+.movie-name{
+    background:#fff;
+    padding:24rpx;
+    height:50rpx;
+}
+.title{
+    font-size:36rpx;
+}
+.movie-score{
+    font-size:32rpx;
+    color:#F07C0A;
+    margin-left:10rpx;
+}
+.movie-date{
+    font-size:24rpx;
+    padding:28rpx;
+    
+}
+.movie-date.active{
+    border-bottom:4rpx solid #E54847;
+    color:#E54847;
+}
+
+
+.date{
+    background:#fff;
+    margin-top:2rpx;
+}
+.date view{
+    display:inline-block;
+}
+.date-scroll{
+    display:flex;
+    white-space: nowrap; 
+}
+.shcedule{
+    background:#F8F8F8;
+    width:100%;
+    margin-top:4rpx;
+}
+.shcedule-none{
+    background:#F8F8F8;
+    height:302rpx;
+    width:100%;
+    margin-top:2rpx;
+}
+.nofilm{
+    font-size:24rpx;
+    text-align:center;
+    line-height:302rpx;
+
+}
+.shedule-list{
+    background:#fff;
+    margin-bottom:4rpx;
+    padding:18rpx 0rpx 18rpx 30rpx;
+}
+.shedule-list > view{
+    display:inline-block;
+
+}
+
+.tm-time{
+    font-size:32rpx;
+}
+.end-time{
+    font-size:22rpx;
+    color:#B6B6B6;
+}
+.lang{
+    font-size:26rpx;
+}
+.th{
+    font-size:22rpx;
+    color:#B6B6B6;
+}
+
+.price{
+    font-size:32rpx;
+    color:#E14C4B;
+    text-align:right;
+}
+.discount{
+    font-size:22rpx;
+    color:#B6B6B6;
+}
+.buy-ticket navigator {
+    padding:10rpx;
+    font-size:24rpx;
+    color:#E14C4B;
+    border:2rpx solid #E14C4B;
+    border-radius:6rpx;
+    vertical-align:top;
+    margin-top:20rpx;
+}
+.movie-time{
+    margin-right:40rpx;
+}
+.movie-lang{
+    margin-right:170rpx;
+}
+.movie-price{
+    margin-right:30rpx;
+}

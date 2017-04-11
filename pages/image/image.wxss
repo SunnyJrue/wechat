@@ -1,0 +1,12 @@
+.big-image{
+    background:#000;
+}
+.big-image swiper{
+    height:1200rpx;
+}
+.big-image swiper-item{
+    margin-top:40%;
+}
+.big-image image{
+    width:100%;
+}

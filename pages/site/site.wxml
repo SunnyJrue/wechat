@@ -1,0 +1,121 @@
+<view>
+    <!-- <view class='header'>
+        {{showInfo.cinemaName}}
+    </view> -->
+
+    <view class='header'>
+        <view>
+            <view class='movie-name'>{{showInfo.movieName}}</view>
+            <view class='show-time'>{{showInfo.showTime}}</view>
+        </view>
+        <view class='order'>
+            <button size='mini' disabled='{{ticket.length==0}}'>提交订单</button>
+        </view>
+    </view>
+    
+    <!-- 选电影区 -->
+    <view class='movie-field'>
+        <!-- 图例 -->
+        <view class='movie-tips'>
+            <!-- 示例 -->
+            <view class='show-tips' wx:if='{{ticket.length == 0}}'>
+                <view>
+                    <image src='../../images/blanksite.png'></image><text> 可选</text>
+                </view>
+                <view>
+                    <image src='../../images/selectedsite.png'></image><text> 已选</text>
+                </view>
+                <view>
+                    <image src='../../images/payedsite.png'></image><text> 已售</text>
+                </view>
+                <view>
+                    <image src='../../images/couple.png'></image><text> 情侣座</text>
+                </view>
+            </view>
+
+            <!-- 选择座位后提示 -->
+            <view class='selected-ticket' wx:if='{{ticket.length >0}}' wx:for='{{ticket}}' >
+                    <view>
+                        {{item}}
+                    </view>
+            </view>
+            <view wx:if='{{ticket.length > 0}}' class='total-price'>{{total}}元</view>
+        </view>
+        
+        <!-- 座位区 -->
+        <view class='site-layout'>
+            <!-- 屏幕中央 -->
+            <view class='screen-box'>
+                <text>{{showInfo.hallName}}</text>
+                <image class='screen' src='../../images/screen.png' >
+                   
+                </image>
+                
+            </view>
+            
+            
+            <!-- 座位 -->
+            <view class='site-layout'>
+                <view class='screen-word'>
+                    <text>屏幕中央</text>
+                </view>
+                
+                    
+               
+                <!-- 座位 布局-->
+                <view class='site-detail'>
+                    <!-- <view class='line' wx:key='' wx:for='{{sections[0].seatRows}}' wx:for-item='line'>
+                        <view class='site-rows'  >
+                            <view class='site-row {{status==1?"active":""}}' data-status='{{status}}' wx:for="{{line.seats}}" data-row='{{item.rowNum}}' data-column='{{line.columns-item.columnNum}}' data-columasc='{{item.columnNum}}' data-type='{{item.type}}' bindtap='selectSite'  >
+                                <image src='../../images/blanksite.png'   wx:if="{{item.type=='N'}}" ></image>
+                                <image src='../../images/payedsite.png' wx:if="{{item.type=='LK'}}"></image>
+
+                                <image src='../../images/blanksite.png'  wx:if="{{siteArr[item.rowNum-1][item.columnNum]=='N'}}" ></image>
+                                <image src='../../images/payedsite.png' wx:elif="{{siteArr[item.rowNum-1][item.columnNum]=='LK'}}"></image>
+                            </view>
+
+
+                        </view>
+
+                    </view> -->
+
+                   <view class='line' wx:key='' wx:for='{{siteArr}}' wx:for-item='line' wx:for-index='row'>
+                       <view class='site-rows'  >
+                            
+                           <view class='site-row {{status==1?"active":""}}' data-row='{{row}}'  data-column='{{column}}' data-lengths="{{line.length}}" wx:for="{{line}}" wx:for-index='column'  bindtap='selectSite'  >
+                               <!-- <image src='../../images/blanksite.png'   wx:if="{{item.type=='N'}}" ></image>
+                               <image src='../../images/payedsite.png' wx:if="{{item.type=='LK'}}"></image>
+                            } -->
+                                
+                               <image src='../../images/blanksite.png'  wx:if="{{item =='N'}}" ></image>
+                               <image src='../../images/payedsite.png' wx:elif="{{item =='LK'}}"></image>
+                               <image src='../../images/selectedsite.png' wx:elif="{{item =='SL'}}"></image>
+                           </view>
+
+                          
+                       </view>
+
+                   </view>
+
+                </view>
+
+                <!-- 座位排号 -->
+                <view class='site-line'>
+                    <view wx:key='' wx:for-item='rows' wx:for='{{sections}}'>
+                        <view wx:key='' wx:for-item='rowNum' wx:for='{{rows.seatRows}}'>
+                            <view class='row-num'>{{rowNum.rowNum}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+
+        </view>
+
+        
+    </view>
+
+
+
+
+</view>

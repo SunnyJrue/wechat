@@ -1,0 +1,100 @@
+<view class='movie-details' wx:if='{{showMsg}}'>
+    <view class='details-title' bindtap='backIndex'>
+        <view class='back-icon'>{{left}}</view>
+        {{movieMsg.nm}}
+    </view>
+    <view class='details-head' >
+        <view class='details-box'>
+            <view>
+                <image src='{{movieMsg.img}}'></image>
+            </view>
+            <view class='details-content'>
+                <view class='movie-name'>{{movieMsg.nm}}</view>
+                <view class='movie-score' wx:if="{{movieMsg.sc !=0}}">
+                    用户评分 
+                    <view>
+                        <text class='score-highlight'>{{movieMsg.sc}}</text><text>({{snum}}万评分)</text>
+                    </view>
+                </view>
+                <view class='movie-score' wx:if="{{movieMsg.sc ==0}}">
+                    <view class='score-wish'>{{movieMsg.wish+"人想看"}}</view>
+                </view>
+                <view>{{movieMsg.cat}}</view>
+                <view>{{movieMsg.ver}}</view>
+                <view>{{movieMsg.src+"/"+movieMsg.dur+'分钟'}}</view>
+                <view>{{movieMsg.rt}}</view>
+            </view>
+        </view>
+        <view class='blur-box' style='background-image:url({{movieMsg.img}});'></view>
+        
+    </view>
+    <view  class='movie-description'>
+        <view class='movie-box'>
+            <button>立即购票</button>
+            <view  class='movie-desc hide-msg'  bindtap='changeHeight'>
+                <view style='height:{{msgHeight}}'>{{dra}}</view>
+                <view class='icon-tips'>{{icon}}</view>
+            </view>
+        </view>
+    </view>
+    
+    <view class='video-play'>
+        <view class='video-title'>视频</view>
+        <video src="{{movieMsg.vd}}"   controls ></video>
+    </view>
+
+    <view class='media-photo'>
+        <view class='media-title'>媒体库</view>
+        <scroll-view class='photo-box'    scroll-x='true'>
+            <block wx:key=''  wx:for='{{mediaPhotos}}'>
+                    <image src='{{item}}' data-index='{{index}}' bindtap='showBigImage'></image>
+            </block>
+        </scroll-view>
+    </view>
+
+    <view class='comments'>
+        <view class='comments-title'>
+            短评
+        </view>
+        <view class='comments-contents'>
+            <view class='coment-lists' wx:key=''  wx:for-item="items"  wx:for="{{comentMsg.hcmts}}">
+
+                <view class='star-count' >
+                    <view wx:for='{{[1,2,3,4,5]}}' wx:for-index='keys'>
+                        <view class='star-yellow' wx:if='{{items.score >= keys+1}}' >
+                          <image src='../../images/star-yellow.svg'></image>
+                        </view>
+                        <view class='star-gray' wx:if='{{items.score < keys+1}}'>
+                            <image src='../../images/star-gray.svg'></image>
+                        </view>
+                    </view>
+                    <text class='release-time'>{{items.time}}</text>
+
+                </view>
+                <view class='comments-text'>{{items.content}}</view>
+                <view class='avator-msg'>
+                    <view class='avator-image'>
+                        <image src='{{items.avatarurl}}'></image>
+                    </view>
+                    <text class='user-nickname'>{{items.nick}}</text>
+                    <text class='payed'>购</text>
+
+                    <view class='comment-approve'>
+                        <image class='comment-icon' src='../../images/thumb.svg'></image>
+                        <view >{{items.approve}}</view>
+                        <image class='comment-icon' src='../../images/msg.svg'></image>
+                        <view>{{items.reply}}</view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+        
+    </view>
+
+
+   
+
+   
+
+</view>

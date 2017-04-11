@@ -1,0 +1,9 @@
+<view>
+    <view wx:for="{{cinemas}}">
+        <navigator class='cinemas-area' url='/pages/cinema/cinema?area={{index}}' >
+            {{index}}
+            <view class='cinema-more'>></view>
+        </navigator>
+    </view>
+    
+</view>

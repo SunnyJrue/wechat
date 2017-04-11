@@ -1,0 +1,77 @@
+<view>
+    <view class='cinemaDetail-title'>
+        <view class='text'>
+            <view class='text-nm'>{{cinemaMsg.nm}}</view>
+            <view class='text-addr'>{{cinemaMsg.addr}}</view>
+        </view>
+        <view class='phone' data-phone='{{cinemaMsg.tel[0]}}' bindtap='callphone'>
+                <image src='../../images/phone.svg'></image>
+        </view>
+    </view>
+
+    <view class='movie-show'>
+        <scroll-view class='movie-box' scroll-x='true'>
+            <block wx:key=''  wx:for='{{dataMsg.movies}}' wx:for-item='movie'>
+                    <image data-movieindex='{{index}}' data-movieid='{{movie.id}}' class='{{index==imageIndex?"selected":""}}'  src='{{movie.img}}'  bindtap='selectMovie'></image>
+            </block>
+        </scroll-view>
+    </view>
+
+    <view>
+        <view class='movie-name'>
+            <text class='title'>{{dataMsg.movies[imageIndex].nm}}</text><text class='movie-score'>{{dataMsg.movies[imageIndex].sc!=0?dataMsg.movies[imageIndex].sc:'暂无评'}}分</text>
+        </view>
+        <view>
+            <view class='date' >
+                <scroll-view scroll-x='true' class='date-scroll'>
+                    <block wx:key='' wx:for='{{dataMsg.Dates}}'>
+                        <view class='movie-date  {{index==dateIndex?"active":"" }}' data-slug='{{item.slug}}' bindtap='getDate' data-index='{{index}}'>{{item.text}}</view>
+                    </block>
+                </scroll-view>
+            </view>
+
+            <view class='shcedule'>
+                <view>
+                    <view class='shcedule-none' wx:if="{{dataMsg.DateShow[dateIndex].length == 0}}" class='nofilm'>
+                        今日场次已映完
+                    </view>
+                    <view wx:if='{{dataMsg.DateShow[dateIndex].length != 0}}'>
+                        <view wx:key='' wx:for="{{dataMsg.DateShow[dateSlug]}}" wx:for-item='tMsg'>
+                            <view class='shedule-list'>
+                                <view class='movie-time'>
+                                  <view class='tm-time'>{{tMsg.tm}}</view>
+                                  <view class='end-time'>{{tMsg.end}}结束</view>
+                                </view>
+                                <view class='movie-lang'>
+                                    <view>
+                                        <view class='lang'>
+                                            {{tMsg.lang+tMsg.tp}}
+                                        </view>
+                                        <view class='th'>{{tMsg.th}}</view>
+                                    </view><view wx:if='{{tMsg.prStr}}'>
+                                        {{tMsg.th}}
+                                    </view>
+
+                                </view>
+                                <view class='movie-price'>
+                                    <view class='price'>39元</view>
+                                    <view class='discount'>折扣卡首单优惠</view>
+                                </view>
+                                <view class='buy-ticket' wx:if='{{tMsg.seatStatus == 1}} 'data-showId='{{tMsg.showId}}'>
+                                    <navigator url='{{"/pages/site/site?showId="+tMsg.showId+"&showDate="+dateSlug}}' >选座购票</navigator>
+                                </view>
+                                <view class='buy-ticket' wx:if='{{tMsg.seatStatus == 0}}'>
+                                    停售
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+
+        
+    </view>
+    
+</view>

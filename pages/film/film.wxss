@@ -1,0 +1,17 @@
+page{
+    background:#F5F5F5;
+}
+.cinemas-area{
+    padding:30rpx ;
+    background:#fff;
+    color:#000;
+    font-size:32rpx;
+    position:relative;
+    border-bottom:2rpx solid #F5F5F5;
+}
+.cinema-more{
+    position:absolute;
+    top:20rpx;
+    right:26rpx;
+    font-size:32rpx;
+}

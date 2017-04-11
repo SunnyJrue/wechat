@@ -1,0 +1,9 @@
+<view class='big-image'>
+    <swiper duration='600' current='{{imageIndex}}' wx:if='{{showImage}}'>
+        <block wx:for='{{photoArr}}'>
+            <swiper-item>
+                <image src='{{item}}'></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

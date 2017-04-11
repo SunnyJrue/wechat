@@ -1,0 +1,108 @@
+page{
+    font-family:'Microsoft YaHei';
+}
+
+.movie{
+    background:#fff;
+}
+.movie-box{
+    height: 100%;
+}
+.movie-list {
+    display:flex;
+    flex-direction:column ;
+    padding:0 30rpx;
+}
+.movie-img image {
+    width:128rpx;
+    height:190rpx;
+}
+.movie-container {
+    padding:36rpx 0;
+    border-bottom:2rpx solid #F1F1F1;
+    display:flex;
+}
+.movie-container .movie-content{
+    margin-left:28rpx;
+    flex:1;
+}
+.movie-content view{
+    margin-bottom:6rpx;
+}
+.movie-title{
+    font-size:32rpx;
+    vertical-align:top;
+    position:relative;
+
+}
+.movie-title .movie-3d{
+    font-size:20rpx;
+    display:inline-block;
+    height:20rpx;
+    line-height:20rpx;
+    background:#8BB7CE;
+    padding:2rpx 4rpx;
+    color:#fff;
+    border-radius:6rpx;
+    border:2rpx solid #8BB7CE;
+    margin:0 6rpx;
+    vertical-align:8rpx;
+
+}
+.movie-title .movie-imax{
+    font-size:20rpx;
+    display:inline-block;
+    height:20rpx;
+    line-height:20rpx;
+    padding:2rpx 4rpx;
+    color:#8BB7CE;
+    border:2rpx solid #8BB7CE;
+    border-radius:6rpx;
+    vertical-align:8rpx;
+    
+}
+.movie-score{
+    position:absolute;
+    right:0;
+}
+.movie-num{
+    color:#FFC12D;
+    font-size:32rpx;
+}
+.movie-fen{
+    color:#FFC12D;
+    font-size:20rpx;
+    
+}
+
+.movie-cat{
+    font-size:28rpx;
+    color:#777;
+}
+.movie-star{
+    width:400rpx;
+    font-size:28rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#777;
+}
+.movie-showinfo{
+    font-size:28rpx;
+    color:#A1A1A1;
+    position:relative;
+}
+.pay-ticket,.pay-ticket-pre{
+    padding:10rpx 24rpx;
+    border-radius:8rpx;
+    font-size:24rpx;
+    color:#fff;
+    position:absolute;
+    right:0;
+    top:8rpx;
+    margin-top:6rpx;
+    background:#EF4238;
+}
+.pay-ticket-pre{
+    background:#52B0EB;
+}

@@ -1,0 +1,13 @@
+<view>
+    <view class='cinema-area' wx:for='{{areaCinema}}'>
+        <navigator url='/pages/cinemadet/cinemadet?id={{item.id}}' class='address-list'>
+            <view class='area-cinema-nm'>{{item.nm}}<text class='price'><text class='price-num'>{{item.sellPrice}}</text>元起</text></view>
+            <view class='adress'>{{item.addr}}</view>
+            <view class='labels'>
+                <view class='site'>座</view>
+                <text class='imax' wx:if='{{item.imax}}'>IMAX厅</text>
+            </view>
+
+        </navigator>
+    </view>
+</view>

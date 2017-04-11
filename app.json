@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/film/film",
+    "pages/site/site",
+    "pages/test/test",
+    "pages/cinemadet/cinemadet",
+    "pages/cinema/cinema",
+    "pages/details/details",
+    "pages/image/image"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#444",
+    "navigationBarTitleText": "电影"
+  },
+  "tabBar": {
+    "position":"bottom",
+    "color":"#000",
+    "selectedColor":"#E54847",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "影片",
+      "iconPath":"images/black-film.png",
+      "selectedIconPath":"images/color-film.png"
+      },
+       {
+      "pagePath": "pages/film/film",
+      "text": "影院",
+      "iconPath":"images/nearby.png",
+      "selectedIconPath":"images/nearby-color.png"
+      }
+    ]
+  }
+}
